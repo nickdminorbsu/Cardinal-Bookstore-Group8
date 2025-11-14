@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cardinal Bookstore - Welcome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* --- Web 1.0 Styles --- */
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: #FFFFCC; /* Classic parchment/beige background */
+            color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* The main container, fixed-width and centered */
+        #container {
+            width: 800px;
+            margin: 20px auto; /* Centers the container */
+            padding: 15px;
+            border: 2px solid #000080; /* Navy border */
+            background-color: #FFFFFF; /* White content area */
+        }
+
+        /* Header */
+        #header {
+            text-align: center;
+        }
+
+        #header h1 {
+            color: #800000; /* Maroon */
+            font-size: 36px;
+            margin: 0;
+        }
+
+        /* Navigation Bar */
+        #nav {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #F0F0F0;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+            margin: 15px 0;
+        }
+
+        #nav a {
+            color: #0000FF; /* Bright blue links */
+            text-decoration: underline;
+            cursor: pointer;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        /* Visited link color - a Web 1.0 staple! */
+        #nav a:visited {
+            color: #551A8B; /* Purple */
+        }
+
+        /* Page Content */
+        .page {
+            padding: 10px;
+        }
+
+        /* Hide all pages by default (JS will show one) */
+        #about, #contact, #catalog {
+            display: none;
+        }
+
+        .page h2 {
+            color: #000080; /* Navy */
+            border-bottom: 2px dotted #800000; /* Dotted maroon underline */
+            padding-bottom: 5px;
+        }
+
+        .page p {
+            line-height: 1.5;
+            font-size: 16px;
+        }
+
+        /* Specific styles for the catalog */
+        .book-item {
+            border: 1px dashed #666;
+            padding: 10px;
+            margin-bottom: 15px;
+            background-color: #FAFAFA;
+        }
+
+        .book-item h3 {
+            margin-top: 0;
+            color: #800000; /* Maroon */
+        }
+
+        .book-item p {
+            margin: 5px 0;
+            font-size: 1em;
+        }
+
+        /* Footer */
+        #footer {
+            text-align: center;
+            font-size: 0.8em;
+            color: #333;
+            margin-top: 20px;
+            border-top: 1px solid #CCC;
+            padding-top: 10px;
+        }
+        
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #000080; /* Navy horizontal rule */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <!-- === HEADER === -->
+        <div id="header">
+            <h1>Cardinal Bookstore</h1>
+            <p><i>"Where Every Page Has a History"</i></p>
+        </div>
+
+        <!-- === NAVIGATION === -->
+        <div id="nav">
+            <!-- These links call the showPage() JavaScript function -->
+            <a href="javascript:void(0);" onclick="showPage('home')">Home</a>
+            <a href="javascript:void(0);" onclick="showPage('about')">About Us</a>
+            <a href="javascript:void(0);" onclick="showPage('catalog')">Catalog</a>
+            <a href="javascript:void(0);" onclick="showPage('contact')">Contact</a>
+        </div>
+        
+        <hr>
+
+        <!-- === CONTENT AREA (PAGES) === -->
+        <div id="content">
+
+            <!-- === HOME PAGE === -->
+            <div id="home" class="page">
+                <h2>Welcome to Our Website!</h2>
+                <p>Welcome to Cardinal Bookstore, your cozy corner for new and used books. We are a proud, independent bookstore dedicated to the love of reading. Our digital "home" here is a simple place to learn more about us and see what we have to offer.</p>
+                <p>Please use the links above to navigate our site. You can learn our story, browse a *selection* of our in-store catalog, and find out how to get in touch with us.</p>
+                <p>We believe in the simple pleasure of a physical book, so you won't find any "buy now" buttons here. We invite you to visit us in person to find your next great read!</p>
+            </div>
+
+            <!-- === ABOUT PAGE === -->
+            <div id="about" class="page">
+                <h2>About Cardinal Bookstore</h2>
+                <p>Cardinal Bookstore was established in 1995 by a local family of book lovers. What started as a small stall in the town market has grown into the beloved community hub it is today.</p>
+                <p>Our mission is simple: to provide a quiet, welcoming space for readers of all ages. We specialize in rare finds, local history, and timeless classics. Our shelves are curated by hand, and we're always happy to help you find that perfect book you didn't even know you were looking for.</p>
+                <p>We don't have fancy computers or a big database. We just have a lot of books and a lot of passion. Come in, say hello, and get lost in the stacks.</p>
+            </div>
+
+            <!-- === CATALOG PAGE === -->
+            <div id="catalog" class="page">
+                <h2>Textbook Catalog</h2>
+                <p>This is a selection of the textbooks we carry in-store. This list is updated manually, so please call ahead if you are looking for a specific title to confirm availability!</p>
+                
+                <div class="book-item">
+                    <h3>College Algebra (Miller)</h3>
+                    <p><b>Author:</b> Julie Miller</p>
+                    <p><b>ISBN:</b> 978-1260260434</p>
+                    <p><b>Price:</b> $98.00</p>
+                    <p><b>Publisher:</b> McGraw-Hill Education</p>
+                </div>
+                
+                <div class="book-item">
+                    <h3>Fundamentals of Nursing: The Art & Science of Person-Centered Care</h3>
+                    <p><b>Author:</b> Carol Taylor et al.</p>
+                    <p><b>ISBN:</b> 978-1975168155</p>
+                    <p><b>Price:</b> $164.99</p>
+                    <p><b>Publisher:</b> Wolters Kluwer / LWW</p>
+                </div>
+
+                <div class="book-item">
+                    <h3>College Physics (AP Edition)</h3>
+                    <p><b>Author:</b> Raymond A. Serway, Chris Vuille</p>
+                    <p><b>ISBN:</b> 978-1305965393</p>
+                    <p><b>Price:</b> $47.69</p>
+                    <p><b>Publisher:</b> Cengage Learning</p>
+                </div>
+                
+                <div class="book-item">
+                    <h3>Theory and Practice of Counseling and Psychotherapy</h3>
+                    <p><b>Author:</b> Gerald Corey</p>
+                    <p><b>ISBN:</b> 978-0357764428</p>
+                    <p><b>Price:</b> $166.29</p>
+                    <p><b>Publisher:</b> Cengage Learning</p>
+                </div>
+
+                <div class="book-item">
+                    <h3>Nester’s Microbiology: A Human Perspective</h3>
+                    <p><b>Author:</b> Denise Anderson et al.</p>
+                    <p><b>ISBN:</b> 978-1260240887</p>
+                    <p><b>Price:</b> $78.00</p>
+                    <p><b>Publisher:</b> McGraw-Hill Education</p>
+                </div>
+
+                <div class="book-item">
+                    <h3>DSM-5-TR (Diagnostic and Statistical Manual of Mental Disorders)</h3>
+                    <p><b>Author:</b> American Psychiatric Association</p>
+                    <p><b>ISBN:</b> 978-0890425763</p>
+                    <p><b>Price:</b> $170.00</p>
+                    <p><b>Publisher:</b> American Psychiatric Publishing</p>
+                </div>
+
+                <div class="book-item">
+                    <h3>Principles of Economics (Mankiw, 9th Ed.)</h3>
+                    <p><b>Author:</b> N. Gregory Mankiw</p>
+                    <p><b>ISBN:</b> 978-0357038314</p>
+                    <p><b>Price:</b> $119.95</p>
+                    <p><b>Publisher:</b> Cengage Learning</p>
+                </div>
+
+                <div class="book-item">
+                    <h3>Understanding Business (Nickels, McHugh, McHugh)</h3>
+                    <p><b>ISBN:</b> 978-1260241471</p>
+                    <p><b>Price:</b> $89.00</p>
+                    <p><b>Publisher:</b> McGraw-Hill Education</p>
+                </div>
+
+                <div class="book-item">
+                    <h3>Anatomy & Physiology (OpenStax Edition 2.1)</h3>
+                    <p><b>ISBN:</b> 978-1947172054</p>
+                    <p><b>Price:</b> $63.50 (Print) / Free PDF</p>
+                    <p><b>Publisher:</b> OpenStax / Rice University</p>
+                </div>
+
+                <div class="book-item">
+                    <h3>Calculus: Early Transcendentals (Stewart, 9th Ed.)</h3>
+                    <p><b>Author:</b> James Stewart</p>
+                    <p><b>ISBN:</b> 978-1337613927</p>
+                    <p><b>Price:</b> $87.00</p>
+                    <p><b>Publisher:</b> Cengage Learning</p>
+                </div>
+
+            </div>
+
+            <!-- === CONTACT PAGE === -->
+            <div id="contact" class="page">
+                <h2>Get In Touch</h2>
+                <p>We'd love to see you in person! We are old-fashioned and prefer a phone call or a visit to an e-mail.</p>
+                
+                <p><b>Our Address:</b></p>
+                <p>
+                    123 Main Street<br>
+                    Anytown, USA 12345
+                </p>
+
+                <p><b>Phone:</b></p>
+                <p>(555) 123-4567</p>
+
+                <p><b>Store Hours:</b></p>
+                <p>
+                    Monday - Saturday: 10:00 AM - 6:00 PM<br>
+                    Sunday: 12:00 PM - 4:00 PM
+                </p>
+                
+                <p><b>E-Mail:</b></p>
+                <p>
+                    You can reach us at: info (at) oldebookbarn.com<br>
+                    <i>(Please allow 2-3 business days for a reply)</i>
+                </p>
+            </div>
+
+        </div>
+        
+        <hr>
+
+        <!-- === FOOTER === -->
+        <div id="footer">
+            <p>&copy; 1995-2025 Cardinal Bookstore. All Rights Reserved.</p>
+            <p>This website was built by hand.</p>
+        </div>
+
+    </div>
+
+    <!-- === JAVASCRIPT for PAGE NAVIGATION === -->
+    <script type="text/javascript">
+        function showPage(pageId) {
+            // First, hide all elements with the class 'page'
+            var pages = document.getElementsByClassName('page');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].style.display = 'none';
+            }
+            
+            // Then, show only the page with the matching ID
+            var pageToShow = document.getElementById(pageId);
+            if (pageToShow) {
+                pageToShow.style.display = 'block';
+            }
+        }
+
+        // Ensure the 'home' page is shown by default when the page loads
+        window.onload = function() {
+            showPage('home');
+        };
+    </script>
+
+</body>
+</html>
